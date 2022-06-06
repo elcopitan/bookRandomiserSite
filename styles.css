@@ -37,9 +37,11 @@ button {
   transform: translateY(4px);
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: px) {
     body {
-        margin-top: 10px;
         text-align: center;
+    }
+    h1 {
+        margin-top: auto;
     }
   }
