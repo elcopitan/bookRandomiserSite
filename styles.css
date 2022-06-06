@@ -39,7 +39,7 @@ button {
 
 @media only screen and (max-width: 750px) {
     body {
-        margin-top: 5%;
+        margin-top: 10px;
         text-align: center;
     }
   }
