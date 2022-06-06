@@ -45,4 +45,7 @@ button {
     h1 {
         margin-top: none;
     }
+    #output {
+        line-height: 0.1em;
+    }
   }
