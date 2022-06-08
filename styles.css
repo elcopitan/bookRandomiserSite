@@ -9,15 +9,26 @@ body {
 }
 
 h1 {
-    margin-top: 250px;
+    margin-top: 15%;
 }
 
+/*.resultWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 70%;
+}*/
+
 #output{
-    letter-spacing: .1ch;
-    font-size: 1.5em;
-    font-family: 'Dongle', sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
+    display: flex;
+    flex-basis: 60%;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 1em;
+    font-family: 'Courier';
+    font-weight: lighter;
+    padding: 2em;
 }
 
 button {
@@ -43,9 +54,9 @@ button {
         text-align: center;
     }
     h1 {
-        margin-top: 30PX;
+        margin-top: 15%;
     }
     #output {
-        line-height: 1em;
+        line-height: 1.5em;
     }
   }
