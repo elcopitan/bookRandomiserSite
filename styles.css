@@ -55,8 +55,13 @@ button {
         font-size: 1em;
     }
 
+    h1 {
+        font-size: 2em;
+    }
+
     button{
         padding: 5px, 50px;
+        font-size: 2em;
     }
 
     h1 {
