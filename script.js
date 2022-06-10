@@ -2,685 +2,946 @@ let btn = document.getElementById('btn')
 let output = document.getElementById('output')
 
 let bookList = [
-    ["My Sister, the Serial Killer", "  Oyinkan Braithwaite"],
-
-    ["Queen Unseen", "  Peter Hince"],
-
-    ["Hotel Magnifique", "  Emily J. Taylor"],
-
-    ["Dial A for Aunties (Aunties #1)", "  Jesse Q. Sutanto"],
-
-    ["Red, White & Royal Blue", "  Casey McQuiston"],
-
-    ["Survive the Night", "  Riley Sager"],
-
-    ["The Lost Apothecary", "  Sarah Penner"],
-
-    ["The Paper Palace", "  Miranda Cowley Heller"],
-    ["The Hunger Games (The Hunger Games, #1)", " Suzanne Collins"],
-    ["All Our Hidden Gifts (All Our Hidden Gifts, #1)", " Caroline O'Donoghue"],
-    ["Quicksand of Memory", " Michael J. Malone"],
-    ["The Power", " Naomi Alderman"],
-    ["Butterflies in November", " Auður Ava Ólafsdóttir"],
-    ["Islands of Abandonment", " Cal Flyn"],
-    ["Dopesick: Dealers, Doctors and the Drug Company that Addicted America", " Beth Macy"],
-    ["My Year of Rest and Relaxation", " Ottessa Moshfegh"],
-    ["The Loop (The Loop Trilogy #1)", " Ben  Oliver"],
-    ["Luckenbooth", "  Jenni Fagan"
-    ],
-    [
-        "For Your Own Good", " Samantha Downing"
-    ],
-    [
-        "When the Stars Go Dark", " Paula McLain"
-    ],
-    [
-        "Billy Summers", " Stephen King"
-    ],
-    [
-        "Severance", " Ling Ma"
-    ],
-    [
-        "Saint X", " Alexis Schaitkin"
-    ],
-    [
-        "The Grace Year", " Kim Liggett"
-    ],
-    [
-        "Akin", " Emma Donoghue"
-    ],
-    [
-        "Things We Didn't Talk About When I Was a Girl: A Memoir", " Jeannie Vanasco"
-    ],
-    [
-        "The White Album", " Joan Didion"
-    ],
-    [
-        "After Dark", " Haruki Murakami"
-    ],
-    [
-        "1Q84 (1Q84 #1-3)", " Haruki Murakami"
-    ],
-    [
-        "Norwegian Wood", " Haruki Murakami"
-    ],
-    [
-        "My Policeman", " Bethan Roberts"
-    ],
-    [
-        "On Bowie", " Rob Sheffield"
-    ],
-    [
-        "Talking to Girls about Duran Duran: One Young Man's Quest for True Love and a Cooler Haircut", " Rob Sheffield"
-    ],
-    [
-        "The Substitution Order", " Martin Clark"
-    ],
-    [
-        "State of Terror", " Hillary Rodham Clinton"
-    ],
-    [
-        "Space Opera", " Catherynne M. Valente"
-    ],
-    [
-        "Several People Are Typing", " Calvin Kasulke"
-    ],
-    [
-        "Love Is a Mix Tape: Life and Loss, One Song at a Time", " Rob Sheffield"
-    ],
-    [
-        "The Survivors", " Jane Harper"
-    ],
-    [
-        "Open Water", " Caleb Azumah Nelson"
-    ],
-    [
-        "Uncanny Valley: A Memoir", " Anna Wiener"
-    ],
-    [
-        "Midnight in Chernobyl: The Untold Story of the World's Greatest Nuclear Disaster", " Adam Higginbotham"
-    ],
-    [
-        "All-American Murder: The Rise and Fall of Aaron Hernandez, the Superstar Whose Life Ended on Murderers' Row", " James Patterson"
-    ],
-    [
-        "My Life as a Goddess: A Memoir through (Un)Popular Culture", " Guy Branum"
-    ],
-    [
-        "The Perfect Predator: A Scientist's Race to Save Her Husband from a Deadly Superbug: A Memoir", " Steffanie Strathdee"
-    ],
-    [
-        "A Woman of No Importance: The Untold Story of the American Spy Who Helped Win World War II", " Sonia Purnell"
-    ],
-    [
-        "Say Nothing: A True Story of Murder and Memory in Northern Ireland", " Patrick Radden Keefe"
-    ],
-    [
-        "Prognosis: A Memoir of My Brain", " Sarah Vallance"
-    ],
-    [
-        "Me", " Elton John"
-    ],
-    [
-        "Blowout: Corrupted Democracy, Rogue State Russia, and the Richest, Most Destructive Industry on Earth", " Rachel Maddow"
-    ],
-    [
-        "Embrace Your Weird: Face Your Fears and Unleash Creativity", " Felicia Day"
-    ],
-    [
-        "The Witches Are Coming", " Lindy West"
-    ],
-    [
-        "Maybe You Should Talk to Someone: A Therapist, Her Therapist, and Our Lives Revealed", " Lori Gottlieb"
-    ],
-    [
-        "Stay Sexy & Don't Get Murdered: The Definitive How-To Guide", " Karen Kilgariff"
-    ],
-    [
-        "No Filter: The Inside Story of Instagram", " Sarah Frier"
-    ],
-    [
-        "Greenlights", " Matthew McConaughey"
-    ],
-    [
-        "Don't Overthink It: Make Easier Decisions, Stop Second-Guessing, and Bring More Joy to Your Life", " Anne Bogel"
-    ],
-    [
-        "Clanlands: Whisky, Warfare, and a Scottish Adventure Like No Other", " Sam Heughan"
-    ],
-    [
-        "Robin", " Dave Itzkoff"
-    ],
-    [
-        "Becoming", " Michelle Obama"
-    ],
-    [
-        "The Monk of Mokha", " Dave Eggers"
-    ],
-    [
-        "God Save Texas: A Journey Into the Soul of the Lone Star State", " Lawrence Wright"
-    ],
-    [
-        "The Space Barons: Elon Musk, Jeff Bezos, and the Quest to Colonize the Cosmos", " Christian Davenport"
-    ],
-    [
-        "Inferior: How Science Got Women Wrong—and the New Research That's Rewriting the Story", " Angela Saini"
-    ],
-    [
-        "The Radium Girls: The Dark Story of America's Shining Women", " Kate  Moore"
-    ],
-    [
-        "My Lovely Wife in the Psych Ward", " Mark Lukach"
-    ],
-    [
-        "Get Well Soon: History's Worst Plagues and the Heroes Who Fought Them", " Jennifer   Wright"
-    ],
-    [
-        "Other Minds: The Octopus, the Sea, and the Deep Origins of Consciousness", " Peter Godfrey-Smith"
-    ],
-    [
-        "A Mother's Reckoning: Living in the Aftermath of Tragedy", " Sue Klebold"
-    ],
-    [
-        "Rise of the Rocket Girls: The Women Who Propelled Us, from Missiles to the Moon to Mars", " Nathalia Holt"
-    ],
-    [
-        "The Romanovs: 1613-1918", " Simon Sebag Montefiore"
-    ],
-    [
-        "Hidden Figures", " Margot Lee Shetterly"
-    ],
-    [
-        "M Train", " Patti Smith"
-    ],
-    [
-        "Girl in a Band", " Kim Gordon"
-    ],
-    [
-        "The Witches: Salem, 1692", " Stacy Schiff"
-    ],
-    [
-        "A Kim Jong-Il Production: The Extraordinary True Story of a Kidnapped Filmmaker, His Star Actress, and a Young Dictator's Rise to Power", " Paul   Fischer"
-    ],
-    [
-        "On the Move: A Life", " Oliver Sacks"
-    ],
-    [
-        "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration", " Ed Catmull"
-    ],
     [
-        "The World's Strongest Librarian: A Memoir of Tourette's, Faith, Strength, and the Power of Family", " Josh Hanagarne"
+        " Aristotle and Dante Discover the Secrets of the Universe (Aristotle and Dante, #1) ",
+        " by Benjamin Alire Sáenz ",
+        " Rating: 4.35 ",
+        " Pages: 384"
     ],
     [
-        "The Nineties", " Chuck Klosterman"
+        " The Song of Achilles ",
+        " by Madeline Miller ",
+        " Rating: 4.4 ",
+        " Pages: 378"
     ],
     [
-        "Extreme North: A Cultural History", " Bernd Brunner"
+        " The It Girl ",
+        " by Ruth Ware ",
+        " Rating: 4.02 ",
+        " Pages: 432"
     ],
     [
-        "Funny Farm: My Unexpected Life with 600 Rescue Animals", " Laurie Zaleski"
+        " Devil's Knot: The True Story of the West Memphis Three (Justice Knot, #1) ",
+        " by Mara Leveritt ",
+        " Rating: 4.14 ",
+        " Pages: 419"
     ],
     [
-        "Secrets of the Sprakkar: Iceland's Extraordinary Women and How They Are Changing the World", " Eliza  Reid"
+        " Daisy Darker ",
+        " by Alice Feeney ",
+        " Rating: 4.12 ",
+        " Pages: 352"
     ],
     [
-        "It Ended Badly: Thirteen of the Worst Breakups in History", " Jennifer   Wright"
+        " Things We Do in the Dark ",
+        " by Jennifer Hillier ",
+        " Rating: 4.22 ",
+        " Pages: 352"
     ],
     [
-        "Between Two Kingdoms: A Memoir of a Life Interrupted", " Suleika Jaouad"
+        " The Icepick Surgeon: Murder, Fraud, Sabotage, Piracy, and Other Dastardly Deeds Perpetrated in the Name of Science ",
+        " by Sam Kean ",
+        " Rating: 4 ",
+        " Pages: 368"
     ],
     [
-        "One Night in Miami", " Kemp Powers"
+        " Hooked: How to Build Habit-Forming Products ",
+        " by Nir Eyal ",
+        " Rating: 4.09 ",
+        " Pages: 256"
     ],
     [
-        "The Year of Living Danishly: My Twelve Months Unearthing the Secrets of the World's Happiest Country",
-        "Helen Russell"
+        " The Legacy Journey: A Radical View of Biblical Wealth and Generosity ",
+        " by Dave Ramsey ",
+        " Rating: 4.34 ",
+        " Pages: 256"
     ],
     [
-        "The Almost Nearly Perfect People: Behind the Myth of the Scandinavian Utopia", " Michael Booth"
+        " Pandora's Lab: Seven Stories of Science Gone Wrong ",
+        " by Paul A. Offit ",
+        " Rating: 4.17 ",
+        " Pages: 288"
     ],
     [
-        "Watching Neighbours Twice a Day...: How 90s TV (Almost) Prepared Me For Life", " Josh Widdicombe"
+        " Either/Or ",
+        " by Elif Batuman ",
+        " Rating: 4.34 ",
+        " Pages: 368"
     ],
     [
-        "Dent's Modern Tribes: The Secret Languages of Britain", " Susie Dent"
+        " Delilah Green Doesn't Care (Bright Falls, #1) ",
+        " by Ashley Herring Blake ",
+        " Rating: 4.26 ",
+        " Pages: 384"
     ],
     [
-        "Swiss Watching: Inside Europe's Landlocked Island", " Diccon Bewes"
+        " She Gets the Girl ",
+        " by Rachael Lippincott ",
+        " Rating: 4.26 ",
+        " Pages: 384"
     ],
     [
-        "The Secret Life of Salvador Dalí", " Salvador Dalí"
+        " Sweet Bean Paste ",
+        " by Durian Sukegawa ",
+        " Rating: 4.07 ",
+        " Pages: 213"
     ],
     [
-        "Sapiens: A Brief History of Humankind", " Yuval Noah Harari"
+        " Ugly Love ",
+        " by Colleen Hoover ",
+        " Rating: 4.25 ",
+        " Pages: 337"
     ],
     [
-        "Guns, Germs, and Steel: The Fates of Human Societies", " Jared Diamond"
+        " November 9 ",
+        " by Colleen Hoover ",
+        " Rating: 4.33 ",
+        " Pages: 310"
     ],
     [
-        "Collapse: How Societies Choose to Fail or Succeed", " Jared Diamond"
+        " Verity ",
+        " by Colleen Hoover ",
+        " Rating: 4.43 ",
+        " Pages: 336"
     ],
     [
-        "The Diary of a Bookseller (Diary of a Bookseller, #1)", " Shaun Bythell"
+        " Love Is a Dog from Hell ",
+        " by Charles Bukowski ",
+        " Rating: 4.05 ",
+        " Pages: 312"
     ],
     [
-        "The Making of Jane Austen", " Devoney Looser"
+        " Boy Parts ",
+        " by Eliza  Clark ",
+        " Rating: 4.03 ",
+        " Pages: 304"
     ],
     [
-        "All the Young Men", " Ruth Coker Burks"
+        " The Bell Jar ",
+        " by Sylvia Plath ",
+        " Rating: 4.03 ",
+        " Pages: 294"
     ],
     [
-        "Into the Woods: A Five Act Journey Into Story", " John Yorke"
+        " Just Kids ",
+        " by Patti Smith ",
+        " Rating: 4.18 ",
+        " Pages: 304"
     ],
     [
-        "Nomadland: Surviving America in the Twenty-First Century", " Jessica Bruder"
+        " Dreamland: The True Tale of America's Opiate Epidemic ",
+        " by Sam Quinones ",
+        " Rating: 4.24 ",
+        " Pages: 384"
     ],
     [
-        "Born to Run", " Bruce Springsteen"
+        " The Bear and the Nightingale (The Winternight Trilogy, #1) ",
+        " by Katherine Arden ",
+        " Rating: 4.1 ",
+        " Pages: 319"
     ],
     [
-        "Because Internet: Understanding the New Rules of Language", " Gretchen McCulloch"
+        " One Last Stop ",
+        " by Casey McQuiston ",
+        " Rating: 4.04 ",
+        " Pages: 418"
     ],
     [
-        "Burnout: The Secret to Unlocking the Stress Cycle", " Emily Nagoski"
+        " I Kissed Shara Wheeler ",
+        " by Casey McQuiston ",
+        " Rating: 4.24 ",
+        " Pages: 356"
     ],
     [
-        "Digital Minimalism: Choosing a Focused Life in a Noisy World", " Cal Newport"
+        " Lapvona ",
+        " by Ottessa Moshfegh ",
+        " Rating: 4.04 ",
+        " Pages: 313"
     ],
     [
-        "Will My Cat Eat My Eyeballs? Big Questions from Tiny Mortals About Death", " Caitlin Doughty"
+        " Bad Pharma: How Drug Companies Mislead Doctors and Harm Patients ",
+        " by Ben Goldacre ",
+        " Rating: 4.1 ",
+        " Pages: 448"
     ],
     [
-        "Dead Famous: An Unexpected History of Celebrity from Bronze Age to Silver Screen", " Greg  Jenner"
+        " The Skies Belong to Us: Love and Terror in the Golden Age of Hijacking ",
+        " by Brendan I. Koerner ",
+        " Rating: 4.02 ",
+        " Pages: 318"
     ],
     [
-        "Crying in H Mart", " Michelle Zauner"
+        " The Unwinding: An Inner History of the New America ",
+        " by George Packer ",
+        " Rating: 4.13 ",
+        " Pages: 448"
     ],
     [
-        "Cultish: The Language of Fanaticism", " Amanda Montell"
+        " One Summer: America, 1927 ",
+        " by Bill Bryson ",
+        " Rating: 4.08 ",
+        " Pages: 456"
     ],
     [
-        "Empire of Pain: The Secret History of the Sackler Dynasty", " Patrick Radden Keefe"
+        " Mo' Meta Blues: The World According to Questlove ",
+        " by Ahmir Thompson ",
+        " Rating: 4.11 ",
+        " Pages: 288"
     ],
     [
-        "The Code Breaker: Jennifer Doudna, Gene Editing, and the Future of the Human Race", " Walter Isaacson"
+        " Happy, Happy, Happy: My Life and Legacy as the Duck Commander ",
+        " by Phil Robertson ",
+        " Rating: 4.06 ",
+        " Pages: 224"
     ],
     [
-        "Vanderbilt: The Rise and Fall of an American Dynasty", " Anderson Cooper"
+        " Terms of Enlistment ",
+        " by Marko Kloos ",
+        " Rating: 4.03 ",
+        " Pages: 282"
     ],
     [
-        "Come Fly the World: The Jet-Age Story of the Women of Pan Am", " Julia  Cooke"
+        " Vicious (Villains, #1) ",
+        " by V.E. Schwab ",
+        " Rating: 4.23 ",
+        " Pages: 368"
     ],
     [
-        "The Doctors Blackwell: How Two Pioneering Sisters Brought Medicine to Women and Women to Medicine", " Janice P. Nimura"
+        " Whistling Past the Graveyard ",
+        " by Susan Crandall ",
+        " Rating: 4.07 ",
+        " Pages: 307"
     ],
     [
-        "The Bomber Mafia: A Dream, a Temptation, and the Longest Night of the Second World War", " Malcolm Gladwell"
+        " Police (Harry Hole, #10) ",
+        " by Jo Nesbø ",
+        " Rating: 4.22 ",
+        " Pages: 436"
     ],
     [
-        "My Dark Vanessa", " Kate Elizabeth Russell"
+        " Americanah ",
+        " by Chimamanda Ngozi Adichie ",
+        " Rating: 4.31 ",
+        " Pages: 477"
     ],
     [
-        "Crisis in the Red Zone: The Story of the Deadliest Ebola Outbreak in History, and of the Outbreaks to Come", " Richard   Preston"
+        " A Tale for the Time Being ",
+        " by Ruth Ozeki ",
+        " Rating: 4.03 ",
+        " Pages: 432"
     ],
     [
-        "Invisible Women: Data Bias in a World Designed for Men", " Caroline Criado Pérez"
+        " The Rosie Project (Don Tillman, #1) ",
+        " by Graeme Simsion ",
+        " Rating: 4.02 ",
+        " Pages: 295"
     ],
     [
-        "The Only Plane in the Sky: An Oral History of 9/11", " Garrett M. Graff"
+        " Orphan Train ",
+        " by Christina Baker Kline ",
+        " Rating: 4.18 ",
+        " Pages: 278"
     ],
     [
-        "American Predator: The Hunt for the Most Meticulous Serial Killer of the 21st Century", " Maureen Callahan"
+        " Me Before You (Me Before You, #1) ",
+        " by Jojo Moyes ",
+        " Rating: 4.26 ",
+        " Pages: 369"
     ],
     [
-        "The Institute", " Stephen King"
+        " The Storyteller ",
+        " by Jodi Picoult ",
+        " Rating: 4.27 ",
+        " Pages: 461"
     ],
     [
-        "The Starless Sea", " Erin Morgenstern"
+        " Twilight of the Elites: America After Meritocracy ",
+        " by Christopher L. Hayes ",
+        " Rating: 4 ",
+        " Pages: 304"
     ],
     [
-        "Countdown 1945: The Extraordinary Story of the 116 Days that Changed the World", " Chris Wallace"
+        " The Power of Habit: Why We Do What We Do in Life and Business ",
+        " by Charles Duhigg ",
+        " Rating: 4.12 ",
+        " Pages: 375"
     ],
     [
-        "If It Bleeds", " Stephen King"
+        " Quiet: The Power of Introverts in a World That Can't Stop Talking ",
+        " by Susan Cain ",
+        " Rating: 4.07 ",
+        " Pages: 333"
     ],
     [
-        "Agency", " William Gibson"
+        " Killing Kennedy: The End of Camelot (The Killing of Historical Figures) ",
+        " by Bill O'Reilly ",
+        " Rating: 4.07 ",
+        " Pages: 325"
     ],
     [
-        "The Space Between Worlds", " Micaiah Johnson"
+        " Drift: The Unmooring of American Military Power ",
+        " by Rachel Maddow ",
+        " Rating: 4.06 ",
+        " Pages: 275"
     ],
     [
-        "Shuggie Bain", " Douglas Stuart"
+        " Mrs. Kennedy and Me: An Intimate Memoir ",
+        " by Clint Hill ",
+        " Rating: 4.21 ",
+        " Pages: 343"
     ],
     [
-        "Utopia Avenue", " David Mitchell"
+        " Wild: From Lost to Found on the Pacific Crest Trail ",
+        " by Cheryl Strayed ",
+        " Rating: 4.03 ",
+        " Pages: 315"
     ],
     [
-        "The Vanishing Half", " Brit Bennett"
+        " Seduction and Snacks (Chocolate Lovers, #1) ",
+        " by Tara Sivec ",
+        " Rating: 4.07 ",
+        " Pages: 286"
     ],
     [
-        "A Slow Fire Burning", " Paula Hawkins"
+        " The First Confessor (The Legend of Magda Searus, #1) ",
+        " by Terry Goodkind ",
+        " Rating: 4.19 ",
+        " Pages: 481"
     ],
     [
-        "Local Woman Missing", " Mary Kubica"
+        " The Secret Keeper ",
+        " by Kate Morton ",
+        " Rating: 4.14 ",
+        " Pages: 484"
     ],
     [
-        "Arsenic and Adobo (Tita Rosie's Kitchen Mystery, #1)", " Mia P. Manansala"
+        " Bring Up the Bodies (Thomas Cromwell, #2) ",
+        " by Hilary Mantel ",
+        " Rating: 4.25 ",
+        " Pages: 412"
     ],
     [
-        "Cloud Cuckoo Land", " Anthony Doerr"
+        " The Light Between Oceans ",
+        " by M.L. Stedman ",
+        " Rating: 4.03 ",
+        " Pages: 362"
     ],
     [
-        "The Book of Accidents", " Chuck Wendig"
+        " Gone Girl ",
+        " by Gillian Flynn ",
+        " Rating: 4.11 ",
+        " Pages: 419"
     ],
     [
-        "Termination Shock", " Neal Stephenson"
+        " Memoirs of an Imaginary Friend ",
+        " by Matthew Dicks ",
+        " Rating: 4.13 ",
+        " Pages: 311"
     ],
     [
-        "The End of Men", " Christina Sweeney-Baird"
+        " Tell the Wolves I'm Home ",
+        " by Carol Rifka Brunt ",
+        " Rating: 4.03 ",
+        " Pages: 360"
     ],
     [
-        "Neon Gods (Dark Olympus, #1)", " Katee Robert"
+        " Crazy River: Exploration and Folly in East Africa ",
+        " by Richard Grant ",
+        " Rating: 4.07 ",
+        " Pages: 323"
     ],
     [
-        "The Spanish Love Deception", " Elena Armas"
+        " 1861: The Civil War Awakening ",
+        " by Adam Goodheart ",
+        " Rating: 4.05 ",
+        " Pages: 481"
     ],
     [
-        "Neuromancer (Sprawl, #1)", " William Gibson"
+        " The Eighty-Dollar Champion: Snowman, the Horse That Inspired a Nation ",
+        " by Elizabeth Letts ",
+        " Rating: 4.21 ",
+        " Pages: 329"
     ],
     [
-        "Snow Crash", " Neal Stephenson"
+        " Incognito: The Secret Lives of the Brain ",
+        " by David Eagleman ",
+        " Rating: 4.07 ",
+        " Pages: 290"
     ],
     [
-        "Brave New World", " Aldous Huxley"
+        " It Gets Better: Coming Out, Overcoming Bullying, and Creating a Life Worth Living ",
+        " by Dan Savage ",
+        " Rating: 4.13 ",
+        " Pages: 338"
     ],
     [
-        "11/22/63", " Stephen King"
+        " Damn You, Autocorrect!: Awesomely Embarrassing Text Messages You Didn't Mean to Send ",
+        " by Jillian Madison ",
+        " Rating: 4.01 ",
+        " Pages: 279"
     ],
     [
-        "The Guest List", " Lucy Foley"
+        " The Language of Flowers ",
+        " by Vanessa Diffenbaugh ",
+        " Rating: 4.09 ",
+        " Pages: 323"
     ],
     [
-        "There's No Such Thing as an Easy Job", " Kikuko Tsumura"
+        " Red, White & Royal Blue ",
+        " by Casey McQuiston ",
+        " Rating: 4.18 ",
+        " Pages: 448"
     ],
     [
-        "Slaughterhouse-Five", " Kurt Vonnegut Jr."
+        " The Hunger Games (The Hunger Games, #1) ",
+        " by Suzanne Collins ",
+        " Rating: 4.32 ",
+        " Pages: 374"
     ],
     [
-        "Mythos: The Greek Myths Retold (Stephen Fry's Great Mythology, #1)", " Stephen Fry"
+        " Quicksand of Memory ",
+        " by Michael J. Malone ",
+        " Rating: 4.55 ",
+        " Pages: 300"
     ],
     [
-        "Vagabonds", " Hao Jingfang"
+        " Dopesick: Dealers, Doctors and the Drug Company that Addicted America ",
+        " by Beth Macy ",
+        " Rating: 4.09 ",
+        " Pages: null"
     ],
     [
-        "Ice Crash: Antarctica", " Lynda Engler"
+        " The Grace Year ",
+        " by Kim Liggett ",
+        " Rating: 4.15 ",
+        " Pages: 416"
     ],
     [
-        "Hide", " Kiersten White"
+        " The White Album ",
+        " by Joan Didion ",
+        " Rating: 4.12 ",
+        " Pages: 224"
     ],
     [
-        "A Brush with Love", " Mazey Eddings"
+        " Norwegian Wood ",
+        " by Haruki Murakami ",
+        " Rating: 4.03 ",
+        " Pages: 296"
     ],
     [
-        "Meet Me in the Margins", " Melissa Ferguson"
+        " My Policeman ",
+        " by Bethan Roberts ",
+        " Rating: 4.06 ",
+        " Pages: 352"
     ],
     [
-        "A Pho Love Story", " Loan Le"
+        " State of Terror ",
+        " by Hillary Rodham Clinton ",
+        " Rating: 4.14 ",
+        " Pages: 495"
     ],
     [
-        "Run Rose Run", " Dolly Parton"
+        " My Life as a Goddess: A Memoir through (Un)Popular Culture ",
+        " by Guy Branum ",
+        " Rating: 4.01 ",
+        " Pages: 288"
     ],
     [
-        "A Moveable Feast: The Restored Edition", " Ernest Hemingway"
+        " The Perfect Predator: A Scientist's Race to Save Her Husband from a Deadly Superbug: A Memoir ",
+        " by Steffanie Strathdee ",
+        " Rating: 4.4 ",
+        " Pages: 337"
     ],
     [
-        "Packing for Mars: The Curious Science of Life in the Void", " Mary Roach"
+        " A Woman of No Importance: The Untold Story of the American Spy Who Helped Win World War II ",
+        " by Sonia Purnell ",
+        " Rating: 4.12 ",
+        " Pages: 352"
     ],
     [
-        "Malibu Rising", " Taylor Jenkins Reid"
+        " Me ",
+        " by Elton John ",
+        " Rating: 4.31 ",
+        " Pages: 374"
     ],
     [
-        "On Writing: A Memoir of the Craft", " Stephen King"
+        " Blowout: Corrupted Democracy, Rogue State Russia, and the Richest, Most Destructive Industry on Earth ",
+        " by Rachel Maddow ",
+        " Rating: 4.35 ",
+        " Pages: 406"
     ],
     [
-        "Nightmare Scenario: Inside the Trump Administration's Response to the Pandemic That Changed History", " Yasmeen Abutaleb"
+        " The Witches Are Coming ",
+        " by Lindy West ",
+        " Rating: 4.14 ",
+        " Pages: 260"
     ],
     [
-        "Midnight in Washington: How We Almost Lost Our Democracy and Still Could", " Adam Schiff"
+        " Maybe You Should Talk to Someone: A Therapist, Her Therapist, and Our Lives Revealed ",
+        " by Lori Gottlieb ",
+        " Rating: 4.38 ",
+        " Pages: 415"
     ],
     [
-        "Circe", " Madeline Miller"
+        " Stay Sexy & Don't Get Murdered: The Definitive How-To Guide ",
+        " by Karen Kilgariff ",
+        " Rating: 4.09 ",
+        " Pages: 300"
     ],
     [
-        "The Love Hypothesis", " Ali Hazelwood"
+        " No Filter: The Inside Story of Instagram ",
+        " by Sarah Frier ",
+        " Rating: 4.13 ",
+        " Pages: 352"
     ],
     [
-        "Devolution: A Firsthand Account of the Rainier Sasquatch Massacre", " Max Brooks"
+        " Greenlights ",
+        " by Matthew McConaughey ",
+        " Rating: 4.21 ",
+        " Pages: 308"
     ],
     [
-        "The President's Daughter", " Bill Clinton"
+        " Clanlands: Whisky, Warfare, and a Scottish Adventure Like No Other ",
+        " by Sam Heughan ",
+        " Rating: 4.09 ",
+        " Pages: 297"
     ],
     [
-        "I Alone Can Fix It: Donald J. Trump's Catastrophic Final Year", " Carol Leonnig"
+        " The Monk of Mokha ",
+        " by Dave Eggers ",
+        " Rating: 4.06 ",
+        " Pages: 327"
     ],
     [
-        "Red Rising (Red Rising Saga, #1)", " Pierce Brown"
+        " God Save Texas: A Journey Into the Soul of the Lone Star State ",
+        " by Lawrence Wright ",
+        " Rating: 4 ",
+        " Pages: 368"
     ],
     [
-        "No One Is Talking About This", " Patricia Lockwood"
+        " The Space Barons: Elon Musk, Jeff Bezos, and the Quest to Colonize the Cosmos ",
+        " by Christian Davenport ",
+        " Rating: 4.13 ",
+        " Pages: 320"
     ],
     [
-        "Recursion", " Blake Crouch"
+        " Inferior: How Science Got Women Wrong—and the New Research That's Rewriting the Story ",
+        " by Angela Saini ",
+        " Rating: 4.07 ",
+        " Pages: 200"
     ],
     [
-        "Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch", " Terry Pratchett"
+        " The Radium Girls: The Dark Story of America's Shining Women ",
+        " by Kate  Moore ",
+        " Rating: 4.14 ",
+        " Pages: 479"
     ],
     [
-        "1984", " George Orwell"
+        " My Lovely Wife in the Psych Ward ",
+        " by Mark Lukach ",
+        " Rating: 4.09 ",
+        " Pages: 305"
     ],
     [
-        "The Martian", " Andy Weir"
+        " Get Well Soon: History's Worst Plagues and the Heroes Who Fought Them ",
+        " by Jennifer   Wright ",
+        " Rating: 4.25 ",
+        " Pages: 336"
     ],
     [
-        "Dark Matter", " Blake Crouch"
+        " A Mother's Reckoning: Living in the Aftermath of Tragedy ",
+        " by Sue Klebold ",
+        " Rating: 4.12 ",
+        " Pages: 305"
     ],
     [
-        "Project Hail Mary", " Andy Weir"
+        " A Kim Jong-Il Production: The Extraordinary True Story of a Kidnapped Filmmaker, His Star Actress, and a Young Dictator's Rise to Power ",
+        " by Paul   Fischer ",
+        " Rating: 4.18 ",
+        " Pages: 353"
     ],
     [
-        "Convenience Store Woman", " Sayaka Murata"
+        " Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration ",
+        " by Ed Catmull ",
+        " Rating: 4.21 ",
+        " Pages: 368"
     ],
     [
-        "Falling", " T.J. Newman"
+        " Funny Farm: My Unexpected Life with 600 Rescue Animals ",
+        " by Laurie Zaleski ",
+        " Rating: 4.31 ",
+        " Pages: 256"
     ],
     [
-        "Harry Potter and the Philosopher's Stone", " J.K. Rowling"
+        " Between Two Kingdoms: A Memoir of a Life Interrupted ",
+        " by Suleika Jaouad ",
+        " Rating: 4.43 ",
+        " Pages: 352"
     ],
     [
-        "Daisy Jones & The Six", " Taylor Jenkins Reid"
+        " The Secret Life of Salvador Dalí ",
+        " by Salvador Dalí ",
+        " Rating: 4.1 ",
+        " Pages: 432"
     ],
     [
-        "The Memory Police", " Yōko Ogawa"
+        " Guns, Germs, and Steel: The Fates of Human Societies ",
+        " by Jared Diamond ",
+        " Rating: 4.04 ",
+        " Pages: 498"
     ],
     [
-        "Miss Iceland", " Auður Ava Ólafsdóttir"
+        " The Making of Jane Austen ",
+        " by Devoney Looser ",
+        " Rating: 4.01 ",
+        " Pages: 282"
     ],
     [
-        "The Seven Husbands of Evelyn Hugo", " Taylor Jenkins Reid"
+        " All the Young Men ",
+        " by Ruth Coker Burks ",
+        " Rating: 4.52 ",
+        " Pages: 304"
     ],
     [
-        "Outlawed", " Anna North"
+        " Into the Woods: A Five Act Journey Into Story ",
+        " by John Yorke ",
+        " Rating: 4.23 ",
+        " Pages: 256"
     ],
     [
-        "In Order to Live: A North Korean Girl's Journey to Freedom", " Yeonmi Park"
+        " Nomadland: Surviving America in the Twenty-First Century ",
+        " by Jessica Bruder ",
+        " Rating: 4.04 ",
+        " Pages: 288"
     ],
     [
-        "Klara and the Sun", " Kazuo Ishiguro"
+        " Because Internet: Understanding the New Rules of Language ",
+        " by Gretchen McCulloch ",
+        " Rating: 4.06 ",
+        " Pages: 327"
     ],
     [
-        "The Night Circus", " Erin Morgenstern"
+        " Burnout: The Secret to Unlocking the Stress Cycle ",
+        " by Emily Nagoski ",
+        " Rating: 4 ",
+        " Pages: 277"
     ],
     [
-        "The Silent Patient", " Alex Michaelides"
+        " Digital Minimalism: Choosing a Focused Life in a Noisy World ",
+        " by Cal Newport ",
+        " Rating: 4.07 ",
+        " Pages: 284"
     ],
     [
-        "Before the Coffee Gets Cold (Before the Coffee Gets Cold, #1)", " Toshikazu Kawaguchi"
+        " Will My Cat Eat My Eyeballs? Big Questions from Tiny Mortals About Death ",
+        " by Caitlin Doughty ",
+        " Rating: 4.12 ",
+        " Pages: 222"
     ],
     [
-        "Kim Jiyoung, Born 1982", " Cho Nam-Joo"
+        " Crying in H Mart ",
+        " by Michelle Zauner ",
+        " Rating: 4.31 ",
+        " Pages: 256"
     ],
     [
-        "Mrs England", " Stacey Halls"
+        " Cultish: The Language of Fanaticism ",
+        " by Amanda Montell ",
+        " Rating: 4.04 ",
+        " Pages: 310"
     ],
     [
-        "Escape from Earth: A Secret History of the Space Rocket", " Fraser MacDonald"
+        " The Bomber Mafia: A Dream, a Temptation, and the Longest Night of the Second World War ",
+        " by Malcolm Gladwell ",
+        " Rating: 4.04 ",
+        " Pages: 256"
     ],
     [
-        "Skin of the Sea (Skin of the Sea #1)", " Natasha Bowen"
+        " My Dark Vanessa ",
+        " by Kate Elizabeth Russell ",
+        " Rating: 4.07 ",
+        " Pages: 373"
     ],
     [
-        "Speak Your Truth: Connecting With Your Inner Truth and Learning to Find Your Voice", " Fearne Cotton"
+        " Crisis in the Red Zone: The Story of the Deadliest Ebola Outbreak in History, and of the Outbreaks to Come ",
+        " by Richard   Preston ",
+        " Rating: 4.41 ",
+        " Pages: 375"
     ],
     [
-        "Piranesi", " Susanna Clarke"
+        " Invisible Women: Data Bias in a World Designed for Men ",
+        " by Caroline Criado Pérez ",
+        " Rating: 4.37 ",
+        " Pages: 411"
     ],
     [
-        "Ace of Spades", " Faridah Àbíké-Íyímídé"
+        " The Only Plane in the Sky: An Oral History of 9/11 ",
+        " by Garrett M. Graff ",
+        " Rating: 4.72 ",
+        " Pages: 485"
     ],
     [
-        "The Lighthouse Witches", " C.J.  Cooke"
+        " American Predator: The Hunt for the Most Meticulous Serial Killer of the 21st Century ",
+        " by Maureen Callahan ",
+        " Rating: 4.09 ",
+        " Pages: 285"
     ],
     [
-        "Norse Mythology", " Neil Gaiman"
+        " Countdown 1945: The Extraordinary Story of the 116 Days that Changed the World ",
+        " by Chris Wallace ",
+        " Rating: 4.22 ",
+        " Pages: 320"
     ],
     [
-        "Hercule Poirot's Christmas (Hercule Poirot, #20)", " Agatha Christie"
+        " If It Bleeds ",
+        " by Stephen King ",
+        " Rating: 4.02 ",
+        " Pages: 436"
     ],
     [
-        "The Maidens", " Alex Michaelides"
+        " Shuggie Bain ",
+        " by Douglas   Stuart ",
+        " Rating: 4.33 ",
+        " Pages: 430"
     ],
     [
-        "The Midnight Library", " Matt Haig"
+        " The Vanishing Half ",
+        " by Brit Bennett ",
+        " Rating: 4.19 ",
+        " Pages: 343"
     ],
     [
-        "The Heart Principle (The Kiss Quotient, #3)", " Helen Hoang"
+        " Local Woman Missing ",
+        " by Mary Kubica ",
+        " Rating: 4.12 ",
+        " Pages: 352"
     ],
     [
-        "The Invisible Life of Addie LaRue", " V.E. Schwab"
+        " The Spanish Love Deception ",
+        " by Elena  Armas ",
+        " Rating: 4.05 ",
+        " Pages: 482"
     ],
     [
-        "Earthlings", " Sayaka Murata"
+        " Slaughterhouse-Five ",
+        " by Kurt Vonnegut Jr. ",
+        " Rating: 4.09 ",
+        " Pages: 275"
     ],
     [
-        "The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy, #1)", " Douglas Adams"
+        " Mythos: The Greek Myths Retold (Stephen Fry's Great Mythology, #1) ",
+        " by Stephen Fry ",
+        " Rating: 4.27 ",
+        " Pages: 416"
     ],
     [
-        "Silicon Values: The Future of Free Speech Under Surveillance Capitalism", " Jillian York"
+        " A Moveable Feast: The Restored Edition ",
+        " by Ernest Hemingway ",
+        " Rating: 4.02 ",
+        " Pages: 236"
     ],
     [
-        "The Devil All the Time", " Donald Ray Pollock"
+        " Malibu Rising ",
+        " by Taylor Jenkins Reid ",
+        " Rating: 4.08 ",
+        " Pages: 369"
     ],
     [
-        "Annihilation", " Jeff VanderMeer"
+        " Nightmare Scenario: Inside the Trump Administration's Response to the Pandemic That Changed History ",
+        " by Yasmeen Abutaleb ",
+        " Rating: 4.31 ",
+        " Pages: 496"
     ],
     [
-        "Fahrenheit 451", " Ray Bradbury"
+        " Circe ",
+        " by Madeline Miller ",
+        " Rating: 4.26 ",
+        " Pages: 393"
     ],
     [
-        "Filth", " Irvine Welsh"
+        " The Love Hypothesis ",
+        " by Ali Hazelwood ",
+        " Rating: 4.34 ",
+        " Pages: 352"
     ],
     [
-        "BOX 88 (BOX 88, #1)", " Charles Cumming"
+        " I Alone Can Fix It: Donald J. Trump's Catastrophic Final Year ",
+        " by Carol Leonnig ",
+        " Rating: 4.41 ",
+        " Pages: 476"
     ],
     [
-        "Pines (Wayward Pines, #1)", " Blake Crouch"
+        " Red Rising (Red Rising Saga, #1) ",
+        " by Pierce Brown ",
+        " Rating: 4.25 ",
+        " Pages: 382"
     ],
     [
-        "The Last Town (Wayward Pines, #3)", " Blake Crouch"
+        " Recursion ",
+        " by Blake Crouch ",
+        " Rating: 4.15 ",
+        " Pages: 329"
     ],
     [
-        "The End of October", " Lawrence Wright"
+        " Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch ",
+        " by Terry Pratchett ",
+        " Rating: 4.25 ",
+        " Pages: 491"
     ],
     [
-        "The Innovators by Walter Isaacson | Conversation Starters", " Daily Books"
+        " 1984 ",
+        " by George Orwell ",
+        " Rating: 4.19 ",
+        " Pages: 298"
     ],
     [
-        "Steve Jobs: A Biographic Portrait of the Genius of", " Kevin Lynch"
+        " The Martian ",
+        " by Andy Weir ",
+        " Rating: 4.41 ",
+        " Pages: 384"
     ],
     [
-        "Everything You Really Need to Know About Politics: My Life as an MP", " Jess Phillips"
+        " Dark Matter ",
+        " by Blake Crouch ",
+        " Rating: 4.12 ",
+        " Pages: 340"
     ],
     [
-        "The Plague Year: America in the Time of Covid", " Lawrence Wright"
+        " Project Hail Mary ",
+        " by Andy Weir ",
+        " Rating: 4.52 ",
+        " Pages: 476"
     ],
     [
-        "Checkpoint Charlie: The Cold War, The Berlin Wall, and the Most Dangerous Place On Earth", " Iain MacGregor"
+        " Harry Potter and the Philosopher's Stone ",
+        " by J.K. Rowling ",
+        " Rating: 4.48 ",
+        " Pages: 223"
     ],
     [
-        "Doctor Sleep", " Stephen King"
+        " Daisy Jones & The Six ",
+        " by Taylor Jenkins Reid ",
+        " Rating: 4.24 ",
+        " Pages: 355"
     ],
     [
-        "The Shining", " Stephen King"
+        " The Seven Husbands of Evelyn Hugo ",
+        " by Taylor Jenkins Reid ",
+        " Rating: 4.48 ",
+        " Pages: 389"
     ],
     [
-        "The Ministry for the Future", " Kim Stanley Robinson"
+        " In Order to Live: A North Korean Girl's Journey to Freedom ",
+        " by Yeonmi Park ",
+        " Rating: 4.46 ",
+        " Pages: 273"
     ],
     [
-        "14 (Threshold, #1)", " Peter Clines"
+        " The Night Circus ",
+        " by Erin Morgenstern ",
+        " Rating: 4.03 ",
+        " Pages: 387"
     ],
     [
-        "Defending Jacob", " William Landay"
+        " The Silent Patient ",
+        " by Alex Michaelides ",
+        " Rating: 4.15 ",
+        " Pages: 325"
     ],
     [
-        "Year Zero", " Rob Reid"
+        " Mrs England ",
+        " by Stacey Halls ",
+        " Rating: 4.01 ",
+        " Pages: 424"
     ],
     [
-        "We Are Legion (We Are Bob) (Bobiverse, #1)", " Dennis E. Taylor"
+        " Piranesi ",
+        " by Susanna Clarke ",
+        " Rating: 4.27 ",
+        " Pages: 245"
     ],
     [
-        "An Astronaut's Guide to Life on Earth", " Chris Hadfield"
+        " Ace of Spades ",
+        " by Faridah Àbíké-Íyímídé ",
+        " Rating: 4.28 ",
+        " Pages: 470"
     ],
     [
-        "Red Mars (Mars Trilogy, #1)", " Kim Stanley Robinson"
+        " The Lighthouse Witches ",
+        " by C.J.  Cooke ",
+        " Rating: 4 ",
+        " Pages: 350"
     ],
     [
-        "Pet Sematary", " Stephen King"
+        " Norse Mythology ",
+        " by Neil Gaiman ",
+        " Rating: 4.09 ",
+        " Pages: 301"
     ],
     [
-        "The Girl with All the Gifts (The Girl with All the Gifts, #1)", " M.R. Carey"
+        " The Midnight Library ",
+        " by Matt Haig ",
+        " Rating: 4.05 ",
+        " Pages: 288"
     ],
     [
-        "The Three-Body Problem (Remembrance of Earth’s Past #1)", " Liu Cixin"
+        " The Invisible Life of Addie LaRue ",
+        " by V.E. Schwab ",
+        " Rating: 4.23 ",
+        " Pages: 444"
     ],
     [
-        "Ethel Rosenberg: An American Tragedy", " Anne Sebba"
+        " The Devil All the Time ",
+        " by Donald Ray Pollock ",
+        " Rating: 4.12 ",
+        " Pages: 261"
     ],
     [
-        "The Man in the High Castle", " Philip K. Dick"
+        " BOX 88 (BOX 88, #1) ",
+        " by Charles Cumming ",
+        " Rating: 4.07 ",
+        " Pages: 482"
     ],
     [
-        "Leviathan Wakes (The Expanse, #1)", " James S.A. Corey"
+        " The Plague Year: America in the Time of Covid ",
+        " by Lawrence Wright ",
+        " Rating: 4.13 ",
+        " Pages: 336"
     ],
     [
-        "Ready Player One", " Ernest Cline"
+        " We Are Legion (We Are Bob) (Bobiverse, #1) ",
+        " by Dennis E. Taylor ",
+        " Rating: 4.28 ",
+        " Pages: 383"
     ],
     [
-        "This Is a Call: The Life and Times of Dave Grohl", " Paul Brannigan"
+        " An Astronaut's Guide to Life on Earth ",
+        " by Chris Hadfield ",
+        " Rating: 4.15 ",
+        " Pages: 295"
     ],
     [
-        "Red Dragon (Hannibal Lecter, #1)", " Thomas  Harris"
+        " The Three-Body Problem (Remembrance of Earth’s Past #1) ",
+        " by Liu Cixin ",
+        " Rating: 4.07 ",
+        " Pages: 399"
     ],
     [
-        "Dune", " Frank Herbert"
+        " Ready Player One ",
+        " by Ernest Cline ",
+        " Rating: 4.24 ",
+        " Pages: 374"
     ],
     [
-        "Artemis", " Andy Weir"
+        " Red Dragon (Hannibal Lecter, #1) ",
+        " by Thomas  Harris ",
+        " Rating: 4.04 ",
+        " Pages: 454"
     ]
 ];
 
 
 btn.addEventListener('click', function (){
     let bookToRead = bookList[Math.floor(Math.random() * bookList.length)];
-    output.innerHTML = bookToRead;
+output.innerHTML = bookToRead;
 })
